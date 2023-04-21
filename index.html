@@ -2,12 +2,68 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emma the queen</title>
     <link href="style.css" rel="stylesheet">
+    <script src="index.js" defer></script>
     <link rel="manifest" href="manifest.webmanifest">
+    <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .text-container {
+      width: 80%;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 16px;
+      padding: 10px;
+      border: 2px solid #7d8186;
+      box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+      background-color: gray;
+      border-radius: 10px;
+      margin: auto;
+      text-align: center;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      font-family: Arial, sans-serif;
+      background-color: #555;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin-bottom: 10px;
+    }
+
+    button:hover {
+      background-color: #333;
+    }
+
+    h1{
+        color: firebrick;
+    }
+  </style>
   </head>
   <body>
-    <img src="images/fox1.jpg" alt="a fox picture">
-    <button class="add-button">Ajouter ce site comme application</button>
+  <h1>Emma the queen</h1>
+  <div class="text-container" id="text-container">
+    <p id="compliment-text">Appuie sur "Nouveau compliment" ;)</p>
+  </div>
+  <div>
+    <button onclick="generateCompliment()">Nouveau compliment</button>
+    <button class="add-button">Installer le site</button>
+  </div>
   </body>
 </html>
